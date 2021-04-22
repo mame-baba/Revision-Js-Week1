@@ -5,7 +5,9 @@
   Sales tax is 20% of the price of the product.
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(productPrice) {
+  return productPrice * 1.2;
+}
 
 /*
   CURRENCY FORMATTING
@@ -17,9 +19,15 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function addTaxAndFormatCurrency() {}
 
-/* 
+function addTaxAndFormatCurrency(productPrice) {
+  var total = calculateSalesTax (productPrice);
+  var currency = "£";
+  return  currency + total.toFixed(2)
+
+}
+
+/*
 ===================================================
 ======= TESTS - DO NOT MODIFY BELOW THIS LINE =====
 
@@ -29,6 +37,8 @@ To run these tests type `node 4-tax.js` into your terminal
 
 ===================================================
 */
+
+
 
 const util = require("util");
 
